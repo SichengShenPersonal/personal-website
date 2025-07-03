@@ -14,7 +14,7 @@ function StockDashboard() {
       script.onload = async () => {
         try {
           // 获取 token
-          const res = await fetch('http://172.172.177.103:8000/generate-token');
+          const res = await fetch('https://token.sichengshenpersonal.com/generate-token');
           const data = await res.json();
 
           // 构建 tableau-viz 元素
