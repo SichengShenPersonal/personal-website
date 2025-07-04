@@ -11,8 +11,8 @@ function StockDashboard() {
         <div className="rounded-lg overflow-hidden shadow-lg border border-gray-300">
           <iframe
             src="https://stockvis.sichengshenpersonal.com"
-            width="100%"
-            height="800"
+            width="70%"
+            height="70%"
             frameBorder="0"
             title="Stock Visualization Dashboard"
             allowFullScreen
