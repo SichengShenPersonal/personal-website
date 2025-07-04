@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 function StockDashboard() {
   useEffect(() => {
     const loadTableau = async () => {
-      // 加载 tableau embedding 脚本
+      // 加载 Tableau embedding 脚本
       const script = document.createElement('script');
       script.type = 'module';
       script.src = 'https://10ax.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js';
@@ -14,7 +14,9 @@ function StockDashboard() {
       script.onload = async () => {
         try {
           // 获取 token
-          const res = await fetch('https://token.sichengshenpersonal.com/generate-token');
+          const res = await fetch('https://token.sichengshenpersonal.com/generate-token', {
+            credentials: 'include',
+          });
           const data = await res.json();
 
           // 构建 tableau-viz 元素
@@ -25,7 +27,8 @@ function StockDashboard() {
           viz.setAttribute('height', '800');
           viz.setAttribute('toolbar', 'bottom');
           viz.setAttribute('hide-tabs', '');
-          viz.setAttribute('token', data.token);
+          viz.setAttribute('auth-type', 'custom');         // ✅ 启用自定义 token 模式
+          viz.setAttribute('token', data.token);           // ✅ 正确传入 token
 
           // 插入 DOM
           const container = document.getElementById('tableau-container');
