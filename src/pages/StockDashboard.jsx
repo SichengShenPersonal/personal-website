@@ -1,33 +1,24 @@
-import { useEffect } from 'react';
+import React from 'react';
 
 function StockDashboard() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'module';
-    script.src = 'https://10ax.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-blue-100 text-gray-800 px-6 py-10">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">📈 Personal Stock Insight</h2>
-        <p className="text-lg leading-relaxed mb-6">
-          This is an end-to-end US stock analysis project. I extracted and processed stock data using Python,
-          stored it in a cloud MySQL database, and created this interactive dashboard with Tableau.
-          It features technical indicators, candlestick patterns, and dynamic filters for exploration.
+        <h2 className="text-3xl font-bold mb-6 text-center">Personal Stock Dashboard</h2>
+        <p className="text-lg leading-relaxed mb-8 text-center">
+          This project analyzes U.S. stock data using Python and SQL, stores the results in a cloud database,
+          and visualizes them through a custom-built Dash app. Explore scores, trends, and technical charts interactively.
         </p>
 
         <div className="rounded-lg overflow-hidden shadow-lg border border-gray-300">
-          <tableau-viz
-            id="tableau-viz"
-            src="https://10ax.online.tableau.com/t/ossof/views/Stock/Scoreboard"
+          <iframe
+            src="http://172.172.177.103:8050/"
+            title="Stock Dashboard"
             width="100%"
             height="800"
-            hide-tabs
-            toolbar="bottom"
-          ></tableau-viz>
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>
