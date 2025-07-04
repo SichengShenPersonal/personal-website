@@ -21,3 +21,5 @@ function StockDashboard() {
     </div>
   );
 }
+
+export default StockDashboard;
