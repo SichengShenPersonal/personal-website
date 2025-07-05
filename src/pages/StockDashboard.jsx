@@ -4,14 +4,14 @@ function Stock() {
   const [showIntro, setShowIntro] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50 px-8 sm:px-12 lg:px-32 py-14 text-gray-800">
-      {/* ✅ 导航栏 */}
+    <div className="min-h-screen bg-gray-50 py-14 px-4 sm:px-10 md:px-20 lg:px-40 xl:px-64 text-gray-800">
+      {/* ✅ 顶部导航栏 */}
       <nav className="flex gap-8 mb-12 text-blue-700 text-lg font-medium">
         <a href="/" className="hover:underline">Home</a>
         <a href="/projects" className="hover:underline">Personal Projects</a>
       </nav>
 
-      {/* ✅ 内容区域 */}
+      {/* ✅ 主内容区域 */}
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">📈 Stock</h2>
         <p className="text-lg leading-relaxed mb-8">
@@ -19,7 +19,7 @@ function Stock() {
         </p>
 
         <div className="bg-white rounded-xl shadow-md p-8 space-y-8">
-          {/* Introduction Toggle */}
+          {/* 展开按钮 */}
           <div>
             <button
               onClick={() => setShowIntro(!showIntro)}
@@ -38,7 +38,7 @@ function Stock() {
                   </p>
                 </section>
 
-                {/* ✨ Highlights */}
+                {/* ✨ Key Highlights */}
                 <section>
                   <h3 className="text-2xl font-semibold mb-2 border-b pb-1">✨ Key Highlights</h3>
                   <ul className="list-disc ml-6 space-y-2 text-base leading-relaxed">
@@ -50,7 +50,7 @@ function Stock() {
                   </ul>
                 </section>
 
-                {/* 🛠 Tools & Stack */}
+                {/* 🛠️ Tools & Stack */}
                 <section>
                   <h3 className="text-2xl font-semibold mb-2 border-b pb-1">🛠️ Tools & Stack</h3>
                   <div className="text-base leading-relaxed space-y-4">
