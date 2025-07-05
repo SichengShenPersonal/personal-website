@@ -4,13 +4,20 @@ function Stock() {
   const [showIntro, setShowIntro] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-blue-100 text-gray-800 px-6 py-10">
+    <div className="min-h-screen px-6 lg:px-20 xl:px-32 py-10 bg-gradient-to-br from-white via-blue-50 to-blue-100 text-gray-800">
+      {/* Navigation Bar */}
+      <nav className="flex items-center justify-start space-x-6 mb-8 text-blue-700 font-medium text-lg">
+        <a href="/" className="hover:text-blue-900 transition">Home</a>
+        <a href="/projects" className="hover:text-blue-900 transition">Personal Projects</a>
+      </nav>
+
+      {/* Main Content Container */}
       <div className="max-w-5xl mx-auto space-y-10">
         <h2 className="text-4xl font-bold">📈 Stock</h2>
 
-        {/* Summary (always visible) */}
+        {/* Summary */}
         <p className="text-lg leading-relaxed">
-          This project showcases my full ownership of a cloud-based analytics system—architected, built, and delivered with a real-world mindset. It reflects not only my technical command of Python, SQL, and BI tools, but also my ability to design scalable architecture, optimize data usability, and bridge cloud infrastructure with business-facing insights.
+          This project showcases my full ownership of a cloud-based analytics system—architected, built, and delivered with a real-world mindset...
         </p>
 
         {/* Expandable Introduction Section */}
